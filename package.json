@@ -7,7 +7,7 @@
     "build": "next build",
     "serve": "serve out -l 4173 --no-clipboard",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest",
     "test:e2e": "playwright test"
   },
