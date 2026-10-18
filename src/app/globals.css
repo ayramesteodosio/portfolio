@@ -56,6 +56,12 @@
   --mark: linear-gradient(90deg, var(--ver-blue) 0 82%, var(--ver-yellow) 82% 93%, var(--ver-red) 93% 100%);
 }
 
+@media (max-width: 1100px) {
+  :root {
+    --cols: 44px minmax(0, 1fr) 220px 34px;
+  }
+}
+
 [data-team="lec"] {
   --accent: var(--lec-red);
   --accent-hover: oklch(0.5 0.2 28);

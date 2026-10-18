@@ -20,3 +20,18 @@ test("trocar o idioma mantém a seção", async ({ page }) => {
   await page.getByRole("link", { name: "EN" }).click();
   await expect(page).toHaveURL(/\/en\/#projects$/);
 });
+
+test("linha do Painel do DualSense abre e fecha", async ({ page }) => {
+  await page.goto("/pt/");
+  const row = page.getByRole("button", { name: /Painel do DualSense/ });
+  const image = page.getByRole("img", { name: /Aba Controle do Painel do DualSense/ });
+  await expect(image).not.toBeInViewport();
+  await row.click();
+  await expect(row).toHaveAttribute("aria-expanded", "true");
+  await image.scrollIntoViewIfNeeded();
+  await expect(image).toBeVisible();
+  await row.click();
+  await expect(row).toHaveAttribute("aria-expanded", "false");
+  await expect(page.locator("#d-dualsense > div")).toHaveCSS("min-height", "0px");
+  await expect.poll(() => page.locator("#d-dualsense").evaluate((el) => el.getBoundingClientRect().height)).toBe(0);
+});

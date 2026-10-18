@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { About } from "@/components/About";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { Projects } from "@/components/Projects";
 import { getDictionary, isLocale } from "@/content/i18n";
 
 export default async function Page({ params }: PageProps<"/[locale]">) {
@@ -20,6 +21,7 @@ export default async function Page({ params }: PageProps<"/[locale]">) {
       <main id="conteudo" tabIndex={-1} className="outline-none">
         <Hero dict={dict} />
         <About dict={dict} />
+        <Projects dict={dict} locale={locale} />
       </main>
     </>
   );

@@ -13,3 +13,14 @@ export const btnGhost =
 
 export const secTitle =
   "stretch-wide m-0 font-display text-[clamp(28px,2.5vw,36px)] leading-[1.1] font-[620] tracking-[-0.018em]";
+
+export const statusColor = {
+  public: "bg-s-purple",
+  running: "bg-s-green",
+  design: "bg-s-yellow",
+} as const;
+
+export const square = "inline-block size-2.5 flex-none";
+
+export const textLink =
+  "inline-flex min-h-11 items-center gap-2 text-[15px] font-semibold tracking-[0.02em] text-fg underline decoration-rule-strong underline-offset-[5px] transition-[text-decoration-color] duration-150 ease-telemetry hover:decoration-fg";
