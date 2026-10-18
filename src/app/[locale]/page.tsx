@@ -1,8 +1,11 @@
 import { notFound } from "next/navigation";
 import { About } from "@/components/About";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Projects } from "@/components/Projects";
+import { Stack } from "@/components/Stack";
 import { getDictionary, isLocale } from "@/content/i18n";
 
 export default async function Page({ params }: PageProps<"/[locale]">) {
@@ -22,7 +25,10 @@ export default async function Page({ params }: PageProps<"/[locale]">) {
         <Hero dict={dict} />
         <About dict={dict} />
         <Projects dict={dict} locale={locale} />
+        <Stack dict={dict} />
+        <Contact dict={dict} />
       </main>
+      <Footer dict={dict} />
     </>
   );
 }
