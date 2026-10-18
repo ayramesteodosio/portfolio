@@ -3,7 +3,7 @@
 import type { MouseEvent } from "react";
 import { localeHref, translateHash } from "@/content/i18n";
 import type { Locale } from "@/content/types";
-import { segGroup, segItem } from "./seg";
+import { segGroup, segItem } from "./styles";
 
 const options: { locale: Locale; code: string; lang: string }[] = [
   { locale: "pt", code: "PT", lang: "pt-BR" },

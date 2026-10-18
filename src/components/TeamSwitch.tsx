@@ -3,7 +3,7 @@
 import { useSyncExternalStore } from "react";
 import type { Dictionary } from "@/content/types";
 import { applyTeam, type Team, writeTeam } from "@/lib/team";
-import { segGroup, segItem } from "./seg";
+import { segGroup, segItem } from "./styles";
 
 const options: { team: Team; code: string; bar: string }[] = [
   {
