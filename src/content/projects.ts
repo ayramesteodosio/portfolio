@@ -1,6 +1,6 @@
-import dualsenseControle from "@/assets/images/dualsense-painel-controle.png";
-import mouseBridgePainel from "@/assets/images/mouse-bridge-painel.png";
-import prumoSaidas from "@/assets/images/prumo-saidas-escuro.png";
+import dualsenseControle from "@/assets/images/dualsense-painel-controle.webp";
+import mouseBridgePainel from "@/assets/images/mouse-bridge-painel.webp";
+import prumoSaidas from "@/assets/images/prumo-saidas-escuro.webp";
 import type { Project } from "./types";
 
 export const projects: readonly Project[] = [

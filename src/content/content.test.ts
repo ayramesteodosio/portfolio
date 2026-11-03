@@ -61,3 +61,9 @@ test("números conferidos em 18/10/2026", () => {
   expect(pt.projects.items.prumo.statusDetail).toBe("protótipo, 32 telas");
   expect(pt.projects.items.dualsense.statusDetail).toBe("v0.2.1");
 });
+
+test("capturas dos projetos são WebP", () => {
+  const sources = projects.flatMap((p) => (p.media.kind === "image" ? [String(p.media.image.src)] : []));
+  expect(sources).toHaveLength(3);
+  for (const src of sources) expect(src).toMatch(/\.webp$/);
+});
