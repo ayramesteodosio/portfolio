@@ -61,6 +61,6 @@ export type Dictionary = {
     items: Record<ProjectSlug, ProjectText>;
   };
   stack: { daily: string; also: string };
-  contact: { lead: string; copy: string; copied: string; toast: string };
+  contact: { lead: string; copy: string; copied: string; toast: string; copyFailed: string };
   footer: { backToTop: string };
 };

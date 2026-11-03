@@ -12,8 +12,8 @@ function setClipboard(value: unknown) {
   Object.defineProperty(navigator, "clipboard", { value, configurable: true });
 }
 
-function setExecCommand() {
-  const exec = vi.fn(() => true);
+function setExecCommand(result = true) {
+  const exec = vi.fn(() => result);
   Object.defineProperty(document, "execCommand", { value: exec, configurable: true });
   return exec;
 }
@@ -76,6 +76,15 @@ test("copiar cai no fallback sem Clipboard API", async () => {
   await clickCopy();
   expect(exec).toHaveBeenCalledWith("copy");
   expect(screen.getByRole("status")).toHaveTextContent("E-mail copiado");
+});
+
+test("se a cópia falhar, avisa em vez de dizer que copiou", async () => {
+  setClipboard(undefined);
+  setExecCommand(false);
+  render(<Contact dict={pt} />);
+  await clickCopy();
+  expect(screen.getByRole("status")).toHaveTextContent(pt.contact.copyFailed);
+  expect(screen.getByRole("button", { name: "Copiar" })).toBeInTheDocument();
 });
 
 test("stack numerada", () => {

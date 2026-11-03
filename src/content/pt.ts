@@ -116,6 +116,7 @@ export const pt: Dictionary = {
     copy: "Copiar",
     copied: "Copiado",
     toast: "E-mail copiado",
+    copyFailed: "Não deu para copiar. Selecione o e-mail acima.",
   },
   footer: { backToTop: "Voltar ao topo" },
 };

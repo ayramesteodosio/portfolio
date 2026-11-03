@@ -114,6 +114,7 @@ export const en: Dictionary = {
     copy: "Copy",
     copied: "Copied",
     toast: "Email copied",
+    copyFailed: "Couldn't copy. Select the email above.",
   },
   footer: { backToTop: "Back to top" },
 };

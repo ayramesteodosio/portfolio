@@ -44,3 +44,14 @@ test("copiar o e-mail coloca o endereço na área de transferência", async ({ p
   await expect(page.getByRole("button", { name: "Copiado" })).toBeVisible();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toBe("ayrames.teodosio@hotmail.com");
 });
+
+test("sem Clipboard API, copiar mantém o foco no botão", async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(Navigator.prototype, "clipboard", { get: () => undefined, configurable: true });
+  });
+  await page.goto("/pt/");
+  await page.getByRole("button", { name: "Copiar" }).focus();
+  await page.keyboard.press("Enter");
+  await expect(page.getByRole("status")).toHaveText("E-mail copiado");
+  await expect(page.getByRole("button", { name: "Copiado" })).toBeFocused();
+});
