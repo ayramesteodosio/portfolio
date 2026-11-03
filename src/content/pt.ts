@@ -15,6 +15,7 @@ export const pt: Dictionary = {
   sections: {
     top: { id: "inicio", title: "Início" },
     about: { id: "sobre", title: "Sobre" },
+    experience: { id: "experiencia", title: "Experiência" },
     projects: { id: "projetos", title: "Projetos" },
     stack: { id: "stack", title: "Stack" },
     contact: { id: "contato", title: "Contato" },
@@ -39,6 +40,57 @@ export const pt: Dictionary = {
     offTrackLabel: "Fora do código:",
     offTrack:
       "domingo de corrida, torcendo pelo Max e pelo Charles, e uma fila de jogos que nunca acaba.",
+  },
+  experience: {
+    company: "Inovaxio",
+    role: "Desenvolvedor Full Stack Júnior",
+    period: "04/2025 a 11/2026",
+    lead: "Empresa de software sob medida para clientes. Comecei no front-end, fui o principal desenvolvedor dos painéis de dois produtos e, em 2026, passei a trabalhar também no back-end em Rails, nas plataformas de pagamento e de renegociação de dívidas.",
+    facts: [
+      { term: "Produtos", value: "10" },
+      { term: "Commits", value: "1.100+" },
+      { term: "Arquivos de teste", value: "650+" },
+      { term: "Tempo", value: "1 ano e 7 meses" },
+    ],
+    items: {
+      credito: {
+        name: "Plataforma de crédito",
+        text: "Principal desenvolvedor do painel administrativo, com 86% dos commits: dashboard, pré-análise de clientes, empréstimos e trilha de auditoria.",
+        period: "11/2025 a 04/2026",
+      },
+      entregas: {
+        name: "Gestão de entregas",
+        text: "Principal desenvolvedor do portal das empresas, com 77% dos commits: login por OTP, assinatura digital, gravação de áudio e notificações push.",
+        period: "06/2025 a 11/2025",
+      },
+      pagamentos: {
+        name: "Plataformas de pagamento",
+        text: "Três produtos. No front-end, conta digital com cobranças, assinaturas, links de pagamento, splits e devolução de Pix. No back-end em Rails, filtros e relatórios de cobranças, assinaturas e recebíveis, cartões pré-pagos e aprovação antifraude.",
+        period: "04/2026 a 11/2026",
+      },
+      renegociacao: {
+        name: "Renegociação de dívidas",
+        text: "Endpoints e regras de acordos, refinanciamento e aprovação em massa em Rails, com testes em RSpec, e o painel em React com login em dois fatores.",
+        period: "04/2025 a 09/2026",
+      },
+      crm: {
+        name: "CRM interno",
+        text: "Em um monorepo TypeScript, o módulo de e-mails com SendGrid e partes do motor de orçamentos e da captação de leads via n8n.",
+        period: "06/2026 a 08/2026",
+      },
+      site: {
+        name: "Site institucional e landing pages",
+        text: "O site da própria Inovaxio, em duas versões, e landing pages, com formulário protegido contra spam (honeypot e limite por IP), integração contínua e deploy.",
+        period: "07/2025 a 10/2026",
+      },
+      transmissoes: {
+        name: "Transmissões ao vivo",
+        text: "Página de transmissões ao vivo no app web, com banners e espaços de anúncio.",
+        period: "06/2025 a 08/2025",
+      },
+    },
+    practicesLabel: "No dia a dia:",
+    practices: "testes junto com cada entrega, revisão de código e integração contínua antes do deploy.",
   },
   projects: {
     legend: { public: "Público", running: "Rodando ou em testes", design: "Em design" },

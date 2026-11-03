@@ -24,6 +24,8 @@ export const statusColor = {
 
 export const square = "inline-block size-2.5 flex-none";
 
+export const chip = "border border-rule px-2 py-[7px] font-mono text-xs leading-none font-medium whitespace-nowrap";
+
 export const textLink =
   "inline-flex min-h-11 items-center gap-2 text-[15px] font-semibold tracking-[0.02em] text-fg underline decoration-rule-strong underline-offset-[5px] transition-[text-decoration-color] duration-150 ease-telemetry hover:decoration-fg";
 

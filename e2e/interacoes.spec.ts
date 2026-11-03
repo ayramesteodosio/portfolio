@@ -55,3 +55,12 @@ test("sem Clipboard API, copiar mantém o foco no botão", async ({ page }) => {
   await expect(page.getByRole("status")).toHaveText("E-mail copiado");
   await expect(page.getByRole("button", { name: "Copiado" })).toBeFocused();
 });
+
+test("seções na ordem certa, com a Experiência entre Sobre e Projetos", async ({ page }) => {
+  await page.goto("/pt/");
+  const ids = await page.locator("main > section").evaluateAll((sections) => sections.map((s) => s.id));
+  expect(ids).toEqual(["inicio", "sobre", "experiencia", "projetos", "stack", "contato"]);
+  await page.getByRole("navigation").getByRole("link", { name: "Experiência" }).click();
+  await expect(page).toHaveURL(/#experiencia$/);
+  await expect(page.getByRole("heading", { level: 2, name: "Experiência" })).toBeInViewport();
+});

@@ -21,6 +21,7 @@ test("translateHash", () => {
   expect(translateHash("#projetos", "pt", "en")).toBe("#projects");
   expect(translateHash("#inicio", "pt", "en")).toBe("#top");
   expect(translateHash("#contact", "en", "pt")).toBe("#contato");
+  expect(translateHash("#experiencia", "pt", "en")).toBe("#experience");
   expect(translateHash("#xyz", "pt", "en")).toBe("");
   expect(translateHash("", "pt", "en")).toBe("");
 });

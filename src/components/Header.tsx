@@ -3,7 +3,7 @@ import type { Dictionary, Locale, SectionKey } from "@/content/types";
 import { LangSwitch } from "./LangSwitch";
 import { TeamSwitch } from "./TeamSwitch";
 
-const navKeys: SectionKey[] = ["about", "projects", "stack", "contact"];
+const navKeys: SectionKey[] = ["about", "experience", "projects", "stack", "contact"];
 
 export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   return (
@@ -26,13 +26,13 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
         </a>
         <nav
           aria-label={dict.navLabel}
-          className="flex gap-[30px] max-[860px]:order-3 max-[860px]:w-full max-[860px]:justify-between max-[860px]:gap-2 max-[860px]:border-t max-[860px]:border-border"
+          className="flex gap-[30px] max-[860px]:order-3 max-[860px]:w-full max-[860px]:justify-between max-[860px]:gap-2 max-[860px]:border-t max-[860px]:border-border max-[360px]:gap-0"
         >
           {navKeys.map((key) => (
             <a
               key={key}
               href={`#${dict.sections[key].id}`}
-              className="py-2.5 text-sm font-medium tracking-[0.02em] text-muted no-underline transition-colors duration-150 ease-telemetry hover:text-fg max-[860px]:py-3"
+              className="py-2.5 text-sm font-medium tracking-[0.02em] text-muted no-underline transition-colors duration-150 ease-telemetry hover:text-fg max-[860px]:py-3 max-[360px]:text-[13px] max-[360px]:tracking-normal"
             >
               {dict.sections[key].title}
             </a>

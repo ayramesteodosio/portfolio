@@ -15,6 +15,7 @@ export const en: Dictionary = {
   sections: {
     top: { id: "top", title: "Home" },
     about: { id: "about", title: "About" },
+    experience: { id: "experience", title: "Experience" },
     projects: { id: "projects", title: "Projects" },
     stack: { id: "stack", title: "Stack" },
     contact: { id: "contact", title: "Contact" },
@@ -29,7 +30,7 @@ export const en: Dictionary = {
     portraitAlt: "Portrait of Ayrames Teodósio wearing a black shirt and a badge at a tech event",
   },
   about: {
-    lead: "I'm a full stack developer, and I spent a year and a half at Inovaxio building lending, payments and delivery products for clients. I graduated in Internet Systems from UNCISAL. I work from the interface people use down to the API and the database behind it, and I go deeper into the back end every day.",
+    lead: "I'm a full stack developer, and I spent a year and seven months at Inovaxio building lending, payments and delivery products for clients. I graduated in Internet Systems from UNCISAL. I work from the interface people use down to the API and the database behind it, and I go deeper into the back end every day.",
     facts: [
       { term: "Now", value: "Available to start now" },
       { term: "Education", value: "Internet Systems, UNCISAL" },
@@ -37,6 +38,57 @@ export const en: Dictionary = {
     ],
     offTrackLabel: "Off the clock:",
     offTrack: "race Sundays cheering for Max and Charles, and a game backlog that never ends.",
+  },
+  experience: {
+    company: "Inovaxio",
+    role: "Junior Full Stack Developer",
+    period: "Apr 2025 to Nov 2026",
+    lead: "A custom software company building products for clients. I started on the front end, became the main developer of two products' dashboards and, in 2026, also moved into the Rails back end, on the payment and debt renegotiation platforms.",
+    facts: [
+      { term: "Products", value: "10" },
+      { term: "Commits", value: "1,100+" },
+      { term: "Test files", value: "650+" },
+      { term: "Tenure", value: "1 year, 7 months" },
+    ],
+    items: {
+      credito: {
+        name: "Lending platform",
+        text: "Main developer of the admin dashboard, with 86% of the commits: analytics, customer pre-screening, loans and an audit trail.",
+        period: "Nov 2025 to Apr 2026",
+      },
+      entregas: {
+        name: "Delivery management",
+        text: "Main developer of the business portal, with 77% of the commits: OTP login, digital signatures, audio recording and push notifications.",
+        period: "Jun 2025 to Nov 2025",
+      },
+      pagamentos: {
+        name: "Payment platforms",
+        text: "Three products. On the front end, a digital account with charges, subscriptions, payment links, split payments and instant payment refunds. On the Rails back end, filters and reports for charges, subscriptions and receivables, prepaid cards and anti-fraud approval.",
+        period: "Apr 2026 to Nov 2026",
+      },
+      renegociacao: {
+        name: "Debt renegotiation",
+        text: "Endpoints and business rules for settlements, refinancing and bulk approvals in Rails, with RSpec tests, plus the React dashboard with two-factor login.",
+        period: "Apr 2025 to Sep 2026",
+      },
+      crm: {
+        name: "Internal CRM",
+        text: "In a TypeScript monorepo, the email module with SendGrid and parts of the quoting engine and lead capture through n8n.",
+        period: "Jun 2026 to Aug 2026",
+      },
+      site: {
+        name: "Company website and landing pages",
+        text: "Inovaxio's own website, in two versions, and landing pages, with a spam-protected form (honeypot and per-IP rate limiting), continuous integration and deployment.",
+        period: "Jul 2025 to Oct 2026",
+      },
+      transmissoes: {
+        name: "Live streaming",
+        text: "Live streams page in the web app, with banners and ad slots.",
+        period: "Jun 2025 to Aug 2025",
+      },
+    },
+    practicesLabel: "Day to day:",
+    practices: "tests shipped with every change, code review and continuous integration before deployment.",
   },
   projects: {
     legend: { public: "Public", running: "Running or in testing", design: "In design" },

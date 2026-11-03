@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
+import { Experience } from "@/components/Experience";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -24,6 +25,7 @@ export default async function Page({ params }: PageProps<"/[locale]">) {
       <main id="conteudo" tabIndex={-1} className="outline-none">
         <Hero dict={dict} />
         <About dict={dict} />
+        <Experience dict={dict} />
         <Projects dict={dict} locale={locale} />
         <Stack dict={dict} />
         <Contact dict={dict} />

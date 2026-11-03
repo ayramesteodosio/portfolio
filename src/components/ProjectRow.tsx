@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import type { Locale, Project, ProjectText } from "@/content/types";
-import { square, statusColor, textLink } from "./styles";
+import { chip, square, statusColor, textLink } from "./styles";
 
 type Props = {
   project: Project;
@@ -68,10 +68,7 @@ export function ProjectRow({ project, text, index, locale, defaultOpen }: Props)
         </span>
         <span className="flex flex-wrap gap-1.5 max-[860px]:[grid-area:tags]">
           {project.stack.map((tag) => (
-            <span
-              key={tag}
-              className="border border-rule px-2 py-[7px] font-mono text-xs leading-none font-medium whitespace-nowrap"
-            >
+            <span key={tag} className={chip}>
               {tag}
             </span>
           ))}
