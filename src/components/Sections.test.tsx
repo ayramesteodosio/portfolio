@@ -30,6 +30,6 @@ test("About em português", () => {
   const terms = within(section).getAllByRole("term").map((el) => el.textContent);
   const values = within(section).getAllByRole("definition").map((el) => el.textContent);
   expect(terms).toEqual(["Agora", "Formação", "Rumo"]);
-  expect(values).toEqual(["Full stack na Inovaxio", "Sistemas para Internet, UNCISAL", "Mais fundo no back-end"]);
+  expect(values).toEqual(["Disponível para começar já", "Sistemas para Internet, UNCISAL", "Mais fundo no back-end"]);
   expect(section).toHaveTextContent("torcendo pelo Max e pelo Charles");
 });

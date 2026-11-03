@@ -30,9 +30,9 @@ export const pt: Dictionary = {
       "Retrato de Ayrames Teodósio, de camisa preta e crachá, em um evento de tecnologia",
   },
   about: {
-    lead: "Hoje sou desenvolvedor full stack na Inovaxio. Me formei em Sistemas para Internet pela UNCISAL. Trabalho da interface que a pessoa usa até a API e o banco de dados por trás dela, e a cada dia vou mais fundo no back-end.",
+    lead: "Sou desenvolvedor full stack e passei 1 ano e 7 meses na Inovaxio, construindo produtos de crédito, pagamentos e entregas para clientes. Me formei em Sistemas para Internet pela UNCISAL. Trabalho da interface que a pessoa usa até a API e o banco de dados por trás dela, e a cada dia vou mais fundo no back-end.",
     facts: [
-      { term: "Agora", value: "Full stack na Inovaxio" },
+      { term: "Agora", value: "Disponível para começar já" },
       { term: "Formação", value: "Sistemas para Internet, UNCISAL" },
       { term: "Rumo", value: "Mais fundo no back-end" },
     ],

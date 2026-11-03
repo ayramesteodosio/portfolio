@@ -29,9 +29,9 @@ export const en: Dictionary = {
     portraitAlt: "Portrait of Ayrames Teodósio wearing a black shirt and a badge at a tech event",
   },
   about: {
-    lead: "I'm a full stack developer at Inovaxio. I graduated in Internet Systems from UNCISAL. I work from the interface people use down to the API and the database behind it, and I go deeper into the back end every day.",
+    lead: "I'm a full stack developer, and I spent a year and a half at Inovaxio building lending, payments and delivery products for clients. I graduated in Internet Systems from UNCISAL. I work from the interface people use down to the API and the database behind it, and I go deeper into the back end every day.",
     facts: [
-      { term: "Now", value: "Full stack at Inovaxio" },
+      { term: "Now", value: "Available to start now" },
       { term: "Education", value: "Internet Systems, UNCISAL" },
       { term: "Next", value: "Deeper into the back end" },
     ],
