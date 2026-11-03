@@ -38,3 +38,19 @@ test("raiz sem JavaScript leva para /pt/", async ({ browser }) => {
   await expect(page.locator("html")).toHaveAttribute("lang", "pt-BR");
   await context.close();
 });
+
+for (const [locale, ogLocale] of [
+  ["pt", "pt_BR"],
+  ["en", "en_US"],
+] as const) {
+  test(`/${locale}/ tem imagem de compartilhamento`, async ({ page, request }) => {
+    await page.goto(`/${locale}/`);
+    const image = await page.locator('meta[property="og:image"]').getAttribute("content");
+    expect(image).toMatch(/\/og\.png$/);
+    await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute("content", ogLocale);
+    await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
+    const response = await request.get(image!);
+    expect(response.status()).toBe(200);
+    expect(response.headers()["content-type"]).toBe("image/png");
+  });
+}

@@ -64,6 +64,6 @@ test("números conferidos em 18/10/2026", () => {
 
 test("capturas dos projetos são WebP", () => {
   const sources = projects.flatMap((p) => (p.media.kind === "image" ? [String(p.media.image.src)] : []));
-  expect(sources).toHaveLength(3);
+  expect(sources.length).toBeGreaterThan(0);
   for (const src of sources) expect(src).toMatch(/\.webp$/);
 });

@@ -38,6 +38,21 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
       canonical: `/${locale}/`,
       languages: { "pt-BR": "/pt/", en: "/en/" },
     },
+    openGraph: {
+      type: "website",
+      title: dict.meta.title,
+      description: dict.meta.description,
+      url: `/${locale}/`,
+      siteName: site.name,
+      locale: locale === "pt" ? "pt_BR" : "en_US",
+      images: [{ url: "og.png", width: 1200, height: 630, alt: site.name }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.meta.title,
+      description: dict.meta.description,
+      images: ["og.png"],
+    },
   };
 }
 
