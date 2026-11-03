@@ -35,3 +35,8 @@ export function translateHash(hash: string, from: Locale, to: Locale): string {
   const key = (Object.keys(sections) as SectionKey[]).find((k) => sections[k].id === id);
   return key ? `#${dictionaries[to].sections[key].id}` : "";
 }
+
+export function localeRedirectScript(basePath: string = site.basePath): string {
+  const hrefs = JSON.stringify(Object.fromEntries(locales.map((locale) => [locale, localeHref(locale, basePath)])));
+  return `(function(){var h=${hrefs},l=navigator.languages||[navigator.language||""];for(var i=0;i<l.length;i++){var b=String(l[i]).toLowerCase().split("-")[0];if(Object.prototype.hasOwnProperty.call(h,b)){location.replace(h[b]);return}}location.replace(h.${defaultLocale})})()`;
+}

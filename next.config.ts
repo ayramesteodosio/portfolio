@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true },
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
   agentRules: false,
-  experimental: { inlineCss: true },
+  experimental: { inlineCss: true, globalNotFound: true },
   turbopack: {
     rules: {
       "*.css": {

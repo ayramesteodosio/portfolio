@@ -1,3 +1,4 @@
+import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 import { en } from "../src/content/en";
 import { pt } from "../src/content/pt";
@@ -52,5 +53,40 @@ for (const [locale, ogLocale] of [
     const response = await request.get(image!);
     expect(response.status()).toBe(200);
     expect(response.headers()["content-type"]).toBe("image/png");
+  });
+}
+
+test("endereço inexistente mostra a página 404 do site", async ({ page }) => {
+  const response = await page.goto("/nao-existe/");
+  expect(response?.status()).toBe(404);
+  await expect(page.locator("html")).toHaveAttribute("lang", "pt-BR");
+  await expect(page.getByRole("link", { name: "Português" })).toHaveAttribute("href", /\/pt\/$/);
+  await expect(page.getByRole("link", { name: "English" })).toHaveAttribute("href", /\/en\/$/);
+  const results = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa"]).analyze();
+  expect(results.violations.map((v) => v.id)).toEqual([]);
+});
+
+test("a raiz tem prévia de compartilhamento e links para os dois idiomas", async ({ request }) => {
+  const html = await (await request.get("/")).text();
+  expect(html).toMatch(/<meta property="og:image" content="[^"]*\/og\.png"/);
+  expect(html).toMatch(/<meta property="og:description" content="[^"]+"/);
+  expect(html).toMatch(/<meta name="twitter:card" content="summary_large_image"/);
+  expect(html).toMatch(/<meta name="robots" content="noindex/);
+  expect(html).toMatch(/<a href="\/pt\/"/);
+  expect(html).toMatch(/<a href="\/en\/"/);
+});
+
+for (const [locale, expected] of [
+  ["en-US", /\/en\/$/],
+  ["pt-BR", /\/pt\/$/],
+  ["es-ES", /\/pt\/$/],
+] as const) {
+  test(`raiz redireciona ${locale} sem esperar o JavaScript do Next`, async ({ browser }) => {
+    const context = await browser.newContext({ locale });
+    await context.route("**/_next/static/chunks/**", (route) => route.abort());
+    const page = await context.newPage();
+    await page.goto("/");
+    await expect(page).toHaveURL(expected);
+    await context.close();
   });
 }

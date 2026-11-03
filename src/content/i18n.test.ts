@@ -1,5 +1,5 @@
-import { expect, test } from "vitest";
-import { isLocale, localeHref, pickLocale, translateHash } from "./i18n";
+import { expect, test, vi } from "vitest";
+import { isLocale, localeHref, localeRedirectScript, pickLocale, translateHash } from "./i18n";
 
 test.each([
   [["pt-BR"], "pt"],
@@ -28,4 +28,16 @@ test("translateHash", () => {
 test("isLocale", () => {
   expect(isLocale("pt")).toBe(true);
   expect(isLocale("fr")).toBe(false);
+});
+
+test.each([
+  [["pt-BR"], "/portfolio/pt/"],
+  [["en-US", "pt-BR"], "/portfolio/en/"],
+  [["es-ES", "EN"], "/portfolio/en/"],
+  [["fr"], "/portfolio/pt/"],
+  [undefined, "/portfolio/pt/"],
+])("script de redirecionamento com %j vai para %s", (languages, expected) => {
+  const replace = vi.fn();
+  new Function("navigator", "location", localeRedirectScript("/portfolio"))({ languages, language: languages?.[0] }, { replace });
+  expect(replace).toHaveBeenCalledExactlyOnceWith(expected);
 });

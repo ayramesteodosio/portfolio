@@ -1,4 +1,3 @@
-import { RedirectToLocale } from "@/components/RedirectToLocale";
 import { localeHref } from "@/content/i18n";
 
 export default function Page() {
@@ -7,7 +6,6 @@ export default function Page() {
       <noscript>
         <meta httpEquiv="refresh" content={`0; url=${localeHref("pt")}`} />
       </noscript>
-      <RedirectToLocale />
       <p className="flex gap-6 font-mono text-sm">
         <a href={localeHref("pt")} lang="pt-BR">
           Português
