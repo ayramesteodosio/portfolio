@@ -48,7 +48,8 @@ export function Hero({ dict }: { dict: Dictionary }) {
             width={site.portrait.width}
             height={site.portrait.height}
             alt={hero.portraitAlt}
-            priority
+            loading="eager"
+            fetchPriority="high"
             sizes="(max-width: 860px) 280px, 360px"
             className="block aspect-square h-auto w-full"
           />

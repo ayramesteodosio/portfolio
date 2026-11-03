@@ -5,12 +5,10 @@ import { afterEach, vi } from "vitest";
 
 type ImageProps = Omit<ImgHTMLAttributes<HTMLImageElement>, "src"> & {
   src: string | { src: string };
-  priority?: boolean;
 };
 
 vi.mock("next/image", () => ({
-  default: ({ src, priority, alt, ...rest }: ImageProps) => {
-    void priority;
+  default: ({ src, alt, ...rest }: ImageProps) => {
     return <img src={typeof src === "string" ? src : src.src} alt={alt} {...rest} />;
   },
 }));
