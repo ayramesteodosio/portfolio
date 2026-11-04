@@ -31,7 +31,7 @@ export const pt: Dictionary = {
       "Retrato de Ayrames Teodósio, de camisa preta e crachá, em um evento de tecnologia",
   },
   about: {
-    lead: "Sou desenvolvedor full stack e passei 1 ano e 7 meses na Inovaxio, construindo produtos de crédito, pagamentos e entregas para clientes. Me formei em Sistemas para Internet pela UNCISAL. Trabalho da interface que a pessoa usa até a API e o banco de dados por trás dela, e a cada dia vou mais fundo no back-end.",
+    lead: "Sou desenvolvedor full stack e passei 1 ano e 8 meses na Inovaxio, construindo produtos de crédito, pagamentos e entregas para clientes. Me formei em Sistemas para Internet pela UNCISAL. Trabalho da interface que a pessoa usa até a API e o banco de dados por trás dela, e a cada dia vou mais fundo no back-end.",
     facts: [
       { term: "Agora", value: "Disponível para começar já" },
       { term: "Formação", value: "Sistemas para Internet, UNCISAL" },
@@ -45,12 +45,12 @@ export const pt: Dictionary = {
     company: "Inovaxio",
     role: "Desenvolvedor Full Stack Júnior",
     period: "04/2025 a 11/2026",
-    lead: "Empresa de software sob medida para clientes. Comecei no front-end, fui o principal desenvolvedor dos painéis de dois produtos e, em 2026, passei a trabalhar também no back-end em Rails, nas plataformas de pagamento e de renegociação de dívidas.",
+    lead: "Empresa de software sob medida para clientes. Comecei no front-end, fui o principal desenvolvedor dos painéis de dois produtos e, em 2026, comecei a dar manutenção também nas APIs em Rails das plataformas de pagamento e de renegociação de dívidas.",
     facts: [
       { term: "Produtos", value: "10" },
       { term: "Commits", value: "1.100+" },
       { term: "Arquivos de teste", value: "650+" },
-      { term: "Tempo", value: "1 ano e 7 meses" },
+      { term: "Tempo", value: "1 ano e 8 meses" },
     ],
     items: {
       credito: {
@@ -65,12 +65,12 @@ export const pt: Dictionary = {
       },
       pagamentos: {
         name: "Plataformas de pagamento",
-        text: "Três produtos. No front-end, conta digital com cobranças, assinaturas, links de pagamento, splits e devolução de Pix. No back-end em Rails, filtros e relatórios de cobranças, assinaturas e recebíveis, cartões pré-pagos e aprovação antifraude.",
+        text: "Três produtos. No front-end, conta digital com cobranças, assinaturas, links de pagamento, splits e devolução de Pix. No Rails, telas de cartões pré-pagos e de aprovação antifraude, além de manutenção em filtros e relatórios de cobranças, assinaturas e recebíveis.",
         period: "04/2026 a 11/2026",
       },
       renegociacao: {
         name: "Renegociação de dívidas",
-        text: "Endpoints e regras de acordos, refinanciamento e aprovação em massa em Rails, com testes em RSpec, e o painel em React com login em dois fatores.",
+        text: "Painel em React com login em dois fatores e, na API em Rails, manutenção e melhorias nas regras de refinanciamento e aprovação em massa, com testes de integração em RSpec.",
         period: "04/2025 a 09/2026",
       },
       crm: {

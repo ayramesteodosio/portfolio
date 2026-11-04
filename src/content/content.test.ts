@@ -67,3 +67,11 @@ test("capturas dos projetos são WebP", () => {
   expect(sources.length).toBeGreaterThan(0);
   for (const src of sources) expect(src).toMatch(/\.webp$/);
 });
+
+test("tempo na Inovaxio é o mesmo no Sobre e na Experiência", () => {
+  const tempo = pt.experience.facts.find((fact) => fact.term === "Tempo")?.value;
+  expect(tempo).toBe("1 ano e 8 meses");
+  expect(pt.about.lead).toContain(tempo);
+  expect(en.experience.facts.find((fact) => fact.term === "Tenure")?.value).toBe("1 year, 8 months");
+  expect(en.about.lead).toContain("a year and eight months");
+});

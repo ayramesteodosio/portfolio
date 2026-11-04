@@ -30,7 +30,7 @@ export const en: Dictionary = {
     portraitAlt: "Portrait of Ayrames Teodósio wearing a black shirt and a badge at a tech event",
   },
   about: {
-    lead: "I'm a full stack developer, and I spent a year and seven months at Inovaxio building lending, payments and delivery products for clients. I graduated in Internet Systems from UNCISAL. I work from the interface people use down to the API and the database behind it, and I go deeper into the back end every day.",
+    lead: "I'm a full stack developer, and I spent a year and eight months at Inovaxio building lending, payments and delivery products for clients. I graduated in Internet Systems from UNCISAL. I work from the interface people use down to the API and the database behind it, and I go deeper into the back end every day.",
     facts: [
       { term: "Now", value: "Available to start now" },
       { term: "Education", value: "Internet Systems, UNCISAL" },
@@ -43,12 +43,12 @@ export const en: Dictionary = {
     company: "Inovaxio",
     role: "Junior Full Stack Developer",
     period: "Apr 2025 to Nov 2026",
-    lead: "A custom software company building products for clients. I started on the front end, became the main developer of two products' dashboards and, in 2026, also moved into the Rails back end, on the payment and debt renegotiation platforms.",
+    lead: "A custom software company building products for clients. I started on the front end, became the main developer of two products' dashboards and, in 2026, also started maintaining the Rails APIs of the payment and debt renegotiation platforms.",
     facts: [
       { term: "Products", value: "10" },
       { term: "Commits", value: "1,100+" },
       { term: "Test files", value: "650+" },
-      { term: "Tenure", value: "1 year, 7 months" },
+      { term: "Tenure", value: "1 year, 8 months" },
     ],
     items: {
       credito: {
@@ -63,12 +63,12 @@ export const en: Dictionary = {
       },
       pagamentos: {
         name: "Payment platforms",
-        text: "Three products. On the front end, a digital account with charges, subscriptions, payment links, split payments and instant payment refunds. On the Rails back end, filters and reports for charges, subscriptions and receivables, prepaid cards and anti-fraud approval.",
+        text: "Three products. On the front end, a digital account with charges, subscriptions, payment links, split payments and instant payment refunds. In Rails, prepaid card and anti-fraud approval screens, plus maintenance on filters and reports for charges, subscriptions and receivables.",
         period: "Apr 2026 to Nov 2026",
       },
       renegociacao: {
         name: "Debt renegotiation",
-        text: "Endpoints and business rules for settlements, refinancing and bulk approvals in Rails, with RSpec tests, plus the React dashboard with two-factor login.",
+        text: "React dashboard with two-factor login and, on the Rails API, maintenance and improvements to the refinancing and bulk approval rules, with RSpec integration tests.",
         period: "Apr 2025 to Sep 2026",
       },
       crm: {
